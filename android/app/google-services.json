@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "882192774328",
+    "firebase_url": "https://adolapp.firebaseio.com",
+    "project_id": "adolapp",
+    "storage_bucket": "adolapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882192774328:android:d11165d64421f732a6b04d",
+        "android_client_info": {
+          "package_name": "com.billbull.dev.adolapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882192774328-k8j33v9h2terqhtt80uahaegto3i91b9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.billbull.dev.adolapp",
+            "certificate_hash": "8213b91b7cc60b68f15deb15d4a7461dbb6daa6c"
+          }
+        },
+        {
+          "client_id": "882192774328-n0m4g7bn0d8ae9g2ce32o7l322akgs7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdM3sAAdUKc2c-zk2gpFPoJUs2DsKKeFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882192774328-n0m4g7bn0d8ae9g2ce32o7l322akgs7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
