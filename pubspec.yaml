@@ -14,17 +14,26 @@ description: A new Flutter application.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_bloc: ^4.0.0
-  dio: ^3.0.9
-  retrofit: ^1.3.4
-  retrofit_generator: ^1.3.4
+  # shared prefrences
+  shared_preferences: ^0.5.7
+  # toast
+  fluttertoast: ^4.0.1
+  # provider [state management]
+  provider: ^4.0.5
+  # intl (for format timestamp purpose)
+  intl: ^0.16.1
+  # number picker
+  numberpicker: ^1.2.0
+  # firebase utility
   firebase_core: ^0.4.4+3
   cloud_firestore: ^0.13.5
+  firebase_auth: ^0.16.0
+  validators: ^2.0.0+1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -62,17 +71,18 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+  fonts:
+    - family: Google
+      fonts:
+        - asset: assets/fonts/google/ProductSans-Regular.ttf
+        - asset: assets/fonts/google/ProductSans-Light.ttf
+        - asset: assets/fonts/google/ProductSans-Bold.ttf
+          weight: 700
+    - family: Opensans
+      fonts:
+        - asset: assets/fonts/opensans/OpenSans-Bold.ttf
+        - asset: assets/fonts/opensans/OpenSans-Light.ttf
+        - asset: assets/fonts/opensans/OpenSans-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
