@@ -42,6 +42,9 @@ class MyApp extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
+          iconTheme: IconThemeData.fallback().copyWith(
+            color: Colors.white,
+          ),
         ),
       ),
       initialRoute: "/",
