@@ -1,6 +1,7 @@
 import 'package:adolapp/helpers/getSharedPrefrences.dart';
 import 'package:adolapp/helpers/toastHelper.dart';
 import 'package:adolapp/provider/product_provider.dart';
+import 'package:adolapp/screens/detail_product_screen.dart';
 import 'package:adolapp/values/strings.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,6 @@ class CartItem extends StatelessWidget {
         Timestamp timestamp = snapshot.data['updated_at'];
         String time =
             DateFormat("dd MMMM yyyy HH:mm").format(timestamp.toDate());
-        print(snapshot.data.toString());
         return Dismissible(
           key: Key(cartId),
           onDismissed: (direction) async {
@@ -72,17 +72,25 @@ class CartItem extends StatelessWidget {
               vertical: 4,
             ),
           ),
-          child: ListTile(
-            leading: Image.network(
-              snapshot.data['product_thumb'],
-              fit: BoxFit.fill,
-              width: 50,
-              height: 100,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamed(DetailProductScreen.routeName, arguments: {"id" : cartData['product_id'], "data": snapshot.data});
+            },
+            child: ListTile(
+              leading: Hero(
+                tag: cartData['product_id'],
+                child: Image.network(
+                  snapshot.data['product_thumb'],
+                  fit: BoxFit.fill,
+                  width: 50,
+                  height: 100,
+                ),
+              ),
+              title: Text(snapshot.data['product_name']),
+              subtitle: Text(time),
+              trailing: Text("${snapshot.data['product_price'].toString()} x ${cartData['quantity']}"),
+              contentPadding: EdgeInsets.all(8.0),
             ),
-            title: Text(snapshot.data['product_name']),
-            subtitle: Text(time),
-            trailing: Text("${snapshot.data['product_price'].toString()} x ${cartData['quantity']}"),
-            contentPadding: EdgeInsets.all(8.0),
           ),
         );
       },

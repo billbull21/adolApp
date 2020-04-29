@@ -2,6 +2,7 @@ import 'package:adolapp/provider/object_temporary_provider.dart';
 import 'package:adolapp/provider/product_provider.dart';
 import 'package:adolapp/screens/add_product_screen.dart';
 import 'package:adolapp/screens/cart_screen.dart';
+import 'package:adolapp/screens/detail_product_screen.dart';
 import 'package:adolapp/screens/login_screen.dart';
 import 'package:adolapp/screens/register_screen.dart';
 import 'package:flutter/material.dart';
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
         "/register": (_) => RegisterScreen(),
         AddProductScreen.routeName: (_) => AddProductScreen(),
         CartScreen.routeName: (_) => CartScreen(),
+        DetailProductScreen.routeName: (_) => DetailProductScreen(),
       },
     );
   }
